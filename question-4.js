@@ -1,5 +1,15 @@
 function sortProductsByPrice(products) {
   // Your code here
+  for (let i = 0; i < products.length; i++) {
+    for (let j = 0; j < products.length - 1; j++) {
+      if (products[j].price > products[j + 1].price) {
+        let result = products[j];
+        products[j] = products[j + 1];
+        products[j + 1] = result;
+      }
+    }
+  }
+  return products;
 }
 
 // Test case
